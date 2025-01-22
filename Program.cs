@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿String OldPhonePad(string input) {
+    Console.WriteLine("E");
+
+    return null;
+}
+
+OldPhonePad("33#");
