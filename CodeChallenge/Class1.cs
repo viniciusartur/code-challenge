@@ -30,6 +30,7 @@ public static class Class1
                 previousChar = 'X';
             } else if (c.Equals('*')) {
                 output = output[..^1];
+                previousChar = 'X';
             } else if (Char.IsDigit(c)) {
                 if (c == previousChar) {
                     repeatCount++;
