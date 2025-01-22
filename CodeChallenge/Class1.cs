@@ -26,6 +26,11 @@ public static class Class1
                     output = output + keypad[previousChar][repeatCount];
                 }
                 break;
+            } else if (c.Equals(' ')) {
+                if (! previousChar.Equals('X')) {
+                    output = output + keypad[previousChar][repeatCount];
+                }
+                previousChar = 'X';
             } else if (c.Equals('*')) {
                 output = output[..^1];
             } else if (Char.IsDigit(c)) {

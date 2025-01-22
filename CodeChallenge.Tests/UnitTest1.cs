@@ -12,6 +12,8 @@ public class UnitTest1
         Assert.Equal("E", OldPhonePad("33#"));
         Assert.Equal("I", OldPhonePad("444#"));
         Assert.Equal("S", OldPhonePad("7777#"));
+        Assert.Equal("AE", OldPhonePad("233#"));
+        Assert.Equal("AA", OldPhonePad("2 2#"));
         //Assert.Equal("B", OldPhonePad("227*#"));
     }
 }
