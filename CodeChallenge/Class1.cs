@@ -15,6 +15,18 @@ public static class Class1
             { "9", ["W", "X", "Y", "Z"] }
         };
 
-        return "E";
+        var output = "";
+
+        foreach(char c in input){
+            if (c.Equals('#')) {
+                break;
+            } else if (c.Equals("*")) {
+                output = output[..^1];
+            } else if (Char.IsDigit(c)) {
+                output = output + 'X';
+            }
+        }
+
+        return output;
     }
 }

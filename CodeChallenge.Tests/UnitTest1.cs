@@ -8,7 +8,7 @@ public class UnitTest1
     [Fact]
     public void Test1()
     {
-        Assert.Equal(OldPhonePad("33#"), "E");
-        Assert.Equal(OldPhonePad("227*#"), "B");
+        Assert.Equal("E", OldPhonePad("33#"));
+        Assert.Equal("B", OldPhonePad("227*#"));
     }
 }
