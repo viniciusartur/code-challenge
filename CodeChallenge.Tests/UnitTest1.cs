@@ -1,5 +1,5 @@
 using Xunit;
-using static CodeChallenge.Class1;
+using static CodeChallenge.CodingChallenge;
 
 namespace CodeChallenge.Tests;
 

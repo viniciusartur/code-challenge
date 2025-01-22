@@ -1,6 +1,6 @@
 ﻿namespace CodeChallenge;
 
-public static class Class1
+public static class CodingChallenge
 {
     public static String OldPhonePad(string input) {
         var keypad = new Dictionary<char, string[]>()
