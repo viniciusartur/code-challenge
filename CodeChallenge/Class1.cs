@@ -21,25 +21,18 @@ public static class Class1
         int repeatCount = 0;
 
         foreach(char c in input){
+            if (c != previousChar && Char.IsDigit(previousChar)) {
+                output = output + keypad[previousChar][repeatCount];
+            }
             if (c.Equals('#')) {
-                if (! previousChar.Equals('X')) {
-                    output = output + keypad[previousChar][repeatCount];
-                }
                 break;
             } else if (c.Equals(' ')) {
-                if (! previousChar.Equals('X')) {
-                    output = output + keypad[previousChar][repeatCount];
-                }
                 previousChar = 'X';
             } else if (c.Equals('*')) {
                 output = output[..^1];
             } else if (Char.IsDigit(c)) {
                 if (c == previousChar) {
                     repeatCount++;
-                } else {
-                    if (! previousChar.Equals('X')) {
-                        output = output + keypad[previousChar][repeatCount];
-                    }
                 }
                 previousChar = c;
             }
