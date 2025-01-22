@@ -16,5 +16,6 @@ public class UnitTest1
         Assert.Equal("AA", OldPhonePad("2 2#"));
         Assert.Equal("B", OldPhonePad("227*#"));
         Assert.Equal("HELLO", OldPhonePad("4433555 555666#"));
+        Assert.Equal("TURING", OldPhonePad("8 88777444666*664#"));
     }
 }
