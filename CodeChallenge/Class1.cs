@@ -23,6 +23,7 @@ public static class Class1
         foreach(char c in input){
             if (c != previousChar && Char.IsDigit(previousChar)) {
                 output = output + keypad[previousChar][repeatCount];
+                repeatCount = 0;
             }
             if (c.Equals('#')) {
                 break;
