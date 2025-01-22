@@ -17,7 +17,7 @@ public static class CodingChallenge
 
         string output = "";
 
-        char previousChar = 'X';
+        char previousChar = '\0';
         int repeatCount = 0;
 
         foreach(char c in input){
@@ -28,10 +28,10 @@ public static class CodingChallenge
             if (c.Equals('#')) {
                 break;
             } else if (c.Equals(' ')) {
-                previousChar = 'X';
+                previousChar = '\0';
             } else if (c.Equals('*')) {
                 output = output[..^1];
-                previousChar = 'X';
+                previousChar = '\0';
             } else if (Char.IsDigit(c)) {
                 if (c == previousChar) {
                     repeatCount++;
