@@ -5,17 +5,18 @@ namespace CodeChallenge.Tests;
 
 public class UnitTest1
 {
-    [Fact]
-    public void Test1()
+    [Theory]
+    [InlineData("2#", "A")]
+    [InlineData("33#", "E")]
+    [InlineData("444#", "I")]
+    [InlineData("7777#", "S")]
+    [InlineData("233#", "AE")]
+    [InlineData("2 2#", "AA")]
+    [InlineData("227*#", "B")]
+    [InlineData("4433555 555666#", "HELLO")]
+    [InlineData("8 88777444666*664#", "TURING")]
+    public void TestOldPhonePadWorksWell(string input, string expected)
     {
-        Assert.Equal("A", OldPhonePad("2#"));
-        Assert.Equal("E", OldPhonePad("33#"));
-        Assert.Equal("I", OldPhonePad("444#"));
-        Assert.Equal("S", OldPhonePad("7777#"));
-        Assert.Equal("AE", OldPhonePad("233#"));
-        Assert.Equal("AA", OldPhonePad("2 2#"));
-        Assert.Equal("B", OldPhonePad("227*#"));
-        Assert.Equal("HELLO", OldPhonePad("4433555 555666#"));
-        Assert.Equal("TURING", OldPhonePad("8 88777444666*664#"));
+        Assert.Equal(expected, OldPhonePad(input));
     }
 }
